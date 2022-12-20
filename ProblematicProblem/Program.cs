@@ -51,12 +51,13 @@ namespace ProblematicProblem
             Console.Write("Would you like to add any activities before we generate one? yes/no: ");
             var addToList = Console.ReadLine();
             Console.WriteLine();
-            while (addToList == "yes")
+            if (addToList == "yes")
             {
                 Console.Write("What would you like to add? ");
                 string userAddition = Console.ReadLine();
                 activities.Add(userAddition);
-
+                Console.Write($"{userAddition} added to list");
+                Console.WriteLine();
             }
 
 
